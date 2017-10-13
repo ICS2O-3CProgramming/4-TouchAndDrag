@@ -31,17 +31,20 @@ blueGirl.y = 200
 -- Description: when blue girl is touched, move her
 local function BlueGirlListener(touch)
 
+	-- this part gets executed when the blue girl is first touched
 	if (touch.phase == "began") then
 		if (alreadyTouchedYellowGirl == false) then
 			alreadyTouchedBlueGirl = true	
 		end
 	end
 
+	-- this part gets executed while the blue girl is being moved
 	if  ( (touch.phase == "moved") and (alreadyTouchedBlueGirl == true) ) then
 		blueGirl.x = touch.x 
 		blueGirl.y = touch.y
 	end
 
+	-- this part gets executed when the blue girl is released
 	if (touch.phase == "ended") then
 		alreadyTouchedBlueGirl = false	
 		alreadyTouchedYellowGirl = false	

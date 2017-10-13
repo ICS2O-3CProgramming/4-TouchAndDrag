@@ -4,15 +4,21 @@
 -- Write what this program does
 
 -- hide the status bar
-display.setStatusBar(display.HiddenStatusBar)
+--***INSERT CODE TO HIDE THE STATUS BAR
 
 -- FILL IN COMMENT HERE
 local backgroundImage = display.newImageRect("Images/background.png", 2048, 1536)
+
+-- FILL IN COMMENT HERE
 local blueGirl = display.newImageRect("Images/blueGirl.png", 150, 150)
+
+-- FILL IN COMMENT HERE
 local blueGirlWidth = blueGirl.width
+
+-- FILL IN COMMENT HERE
 local blueGirlHeight = blueGirl.height
 
--- my boolean variables to keep track of which object I touched first
+-- my boolean variable to keep track of which object I touched first
 local alreadyTouchedBlueGirl = false
 
 -- FILL IN COMMENT HERE
